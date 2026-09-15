@@ -22,7 +22,7 @@ export function NavBar() {
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 sm:px-8">
         <Link to="/#top" className="flex items-center gap-2 font-heading text-sm font-semibold text-(--color-ink)">
           <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-(--color-accent) to-(--color-accent-2) font-mono text-xs font-bold text-(--color-bg)">
-            XN
+            CH
           </span>
           <span className="hidden sm:inline">{t.hero.name}</span>
         </Link>

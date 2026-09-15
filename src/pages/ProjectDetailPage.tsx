@@ -24,7 +24,10 @@ export function ProjectDetailPage() {
 
   if (!project) return <Navigate to="/" replace />
 
-  const otherProjects = t.projects.items.filter((item) => item.slug !== project.slug).slice(0, 3)
+  const otherProjects = t.projects.items
+    .filter((item) => item.slug !== project.slug)
+    .sort((a, b) => (a.featured ?? Infinity) - (b.featured ?? Infinity))
+    .slice(0, 3)
 
   return (
     <article className="py-20 sm:py-28">

@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import { useContent } from '@/i18n/LanguageContext'
 import { Hero } from '@/sections/Hero'
 import { About } from '@/sections/About'
 import { Skills } from '@/sections/Skills'
@@ -10,6 +11,12 @@ import { Contact } from '@/sections/Contact'
 
 export function HomePage() {
   const location = useLocation()
+  const t = useContent()
+
+  useEffect(() => {
+    document.title = t.meta.title
+    document.querySelector('meta[name="description"]')?.setAttribute('content', t.meta.description)
+  }, [t])
 
   useEffect(() => {
     if (!location.hash) return

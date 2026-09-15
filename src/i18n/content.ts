@@ -20,9 +20,9 @@ const urls = {
 
 const en: SiteContent = {
   meta: {
-    title: 'Charilaos Ntourakis — Software Developer & Data Scientist',
+    title: 'Charilaos Ntourakis — Software & Data Engineer',
     description:
-      'Portfolio of Charilaos Ntourakis — full-stack software engineering, data science, and machine learning projects.',
+      'Portfolio of Charilaos Ntourakis — software engineering, data engineering, and machine learning projects.',
   },
   nav: {
     about: 'About',
@@ -97,7 +97,7 @@ const en: SiteContent = {
           'A CRUD REST API and web UI built to practice shipping software the way a real team would: every push is linted, tested, containerised, and pushed to Docker Hub automatically through a GitHub Actions pipeline. The stack runs Flask behind Nginx via Docker Compose, with a pytest suite covering 86% of the application code.',
         tech: ['Python', 'Flask', 'SQLite', 'Docker', 'Nginx', 'GitHub Actions', 'pytest'],
         links: [{ label: 'View on GitHub', href: urls.marsMission }],
-        featured: true,
+        featured: 1,
       },
       {
         slug: 'big-data-management',
@@ -115,6 +115,7 @@ const en: SiteContent = {
           'Four self-contained systems built to cover the major paradigms in modern data management. A FastAPI + Redis events platform handles check-ins, private/public visibility, geo-search and live chat entirely with in-memory data structures. A MongoDB marketplace ("ShopNest") models vendors, products, customers and orders, with the embedding-vs-referencing tradeoff explicitly justified and exercised through aggregation pipelines like customer lifetime value and monthly revenue trends. A Neo4j graph models a small social network to query friendships and shared hobbies in Cypher. And a real-time pipeline streams simulated ATM transactions through Azure Event Hubs into five parallel Stream Analytics jobs — using tumbling, hopping, and sliding windows to flag high-value withdrawals and burst activity — landing the results in Blob Storage.',
         tech: ['Python', 'FastAPI', 'MongoDB', 'Neo4j', 'Redis', 'Azure Event Hubs', 'Azure Stream Analytics'],
         links: [{ label: 'View on GitHub', href: urls.bigData }],
+        featured: 2,
       },
       {
         slug: 'choices13k',
@@ -132,7 +133,7 @@ const en: SiteContent = {
         narrative:
           'A behavioral-economics prediction task: given 13,006 decision-making problems from the Choices13k dataset, predict how often people choose lottery B over lottery A. Feature engineering draws on Prospect Theory to build psychometric subjective-value features, and four model families (XGBoost, Random Forest, Extra Trees, MLP) are compared using GroupKFold cross-validation so that no decision problem leaks between folds — with SHAP values used to explain what actually drives the predictions.',
         tech: ['Python', 'Scikit-learn', 'XGBoost', 'SHAP'],
-        featured: true,
+        featured: 4,
         links: [{ label: 'View on GitHub', href: urls.choices13k }],
       },
       {
@@ -150,7 +151,7 @@ const en: SiteContent = {
         narrative:
           "A statistical replication study investigating occupational bias by age and gender inside GPT-2 Large's embedding space. Beyond measuring the bias itself, the project runs a treatment-vs-control experiment to test whether that bias gets amplified when users interact with Google Images search — combining rigorous inferential statistics with interactive visual diagnostics.",
         tech: ['Python', 'Statsmodels', 'SciPy', 'Altair', 'Seaborn'],
-        featured: true,
+        featured: 5,
         links: [{ label: 'View on GitHub', href: urls.llmBias }],
       },
       {
@@ -205,7 +206,7 @@ const en: SiteContent = {
           'A university group project mining purchasing patterns from real retail point-of-sale data. My role covered data preprocessing, exploratory analysis, clustering, and visualization: K-Means and hierarchical clustering (with PCA/UMAP for dimensionality reduction) segment both shopping baskets into distinct "missions" and customers into behavioral groups, complemented by RFM analysis and CLV estimation. Market Basket Analysis with the Apriori algorithm, visualized as NetworkX co-purchase graphs, surfaces which products tend to sell together.',
         tech: ['Python', 'Scikit-learn', 'UMAP', 'NetworkX'],
         links: [{ label: 'View on GitHub', href: urls.supermarket }],
-        featured: true,
+        featured: 3,
       },
       {
         slug: 'smarket',
@@ -334,9 +335,9 @@ const en: SiteContent = {
 
 const gr: SiteContent = {
   meta: {
-    title: 'Χαρίλαος Ντουράκης — Προγραμματιστής & Data Scientist',
+    title: 'Χαρίλαος Ντουράκης — Software & Data Engineer',
     description:
-      'Portfolio του Χαρίλαου Ντουράκη — projects full-stack ανάπτυξης λογισμικού, data science και μηχανικής μάθησης.',
+      'Portfolio του Χαρίλαου Ντουράκη — projects software engineering, data engineering και μηχανικής μάθησης.',
   },
   nav: {
     about: 'Προφίλ',
@@ -411,7 +412,7 @@ const gr: SiteContent = {
           'Ένα CRUD REST API και web UI φτιαγμένο για εξάσκηση στο πώς «σερβίρεται» λογισμικό όπως θα το έκανε μια πραγματική ομάδα: κάθε push περνάει από lint, tests, containerization και αυτόματο push στο Docker Hub μέσω ενός GitHub Actions pipeline. Το stack τρέχει Flask πίσω από Nginx μέσω Docker Compose, με ένα pytest suite που καλύπτει το 86% του κώδικα της εφαρμογής.',
         tech: ['Python', 'Flask', 'SQLite', 'Docker', 'Nginx', 'GitHub Actions', 'pytest'],
         links: [{ label: 'Προβολή στο GitHub', href: urls.marsMission }],
-        featured: true,
+        featured: 1,
       },
       {
         slug: 'big-data-management',
@@ -429,6 +430,7 @@ const gr: SiteContent = {
           'Τέσσερα αυτόνομα συστήματα χτισμένα για να καλύψουν τα βασικά paradigms στη σύγχρονη διαχείριση δεδομένων. Μια πλατφόρμα events σε FastAPI + Redis διαχειρίζεται check-ins, public/private ορατότητα, γεωαναζήτηση και live chat αποκλειστικά με δομές δεδομένων στη μνήμη. Ένα marketplace σε MongoDB ("ShopNest") μοντελοποιεί vendors, προϊόντα, πελάτες και παραγγελίες, με το δίλημμα embedding-vs-referencing ρητά τεκμηριωμένο και δοκιμασμένο μέσω aggregation pipelines όπως το customer lifetime value και οι μηνιαίες τάσεις εσόδων. Ένα γράφημα σε Neo4j μοντελοποιεί ένα μικρό κοινωνικό δίκτυο για ερωτήματα φιλιών και κοινών χόμπι σε Cypher. Και ένα real-time pipeline στέλνει προσομοιωμένες συναλλαγές ATM μέσω Azure Event Hubs σε πέντε παράλληλα Stream Analytics jobs — χρησιμοποιώντας tumbling, hopping και sliding windows για να εντοπίσει withdrawals υψηλής αξίας και burst δραστηριότητα — καταλήγοντας τα αποτελέσματα σε Blob Storage.',
         tech: ['Python', 'FastAPI', 'MongoDB', 'Neo4j', 'Redis', 'Azure Event Hubs', 'Azure Stream Analytics'],
         links: [{ label: 'Προβολή στο GitHub', href: urls.bigData }],
+        featured: 2,
       },
       {
         slug: 'choices13k',
@@ -446,7 +448,7 @@ const gr: SiteContent = {
         narrative:
           'Ένα πρόβλημα πρόβλεψης από τη συμπεριφορική οικονομική: δοθέντων 13.006 προβλημάτων λήψης απόφασης από το dataset Choices13k, πρόβλεψε πόσο συχνά οι άνθρωποι επιλέγουν τη λοταρία B έναντι της A. Το feature engineering αντλεί από την Prospect Theory για να χτίσει ψυχομετρικά χαρακτηριστικά υποκειμενικής αξίας, και τέσσερις οικογένειες μοντέλων (XGBoost, Random Forest, Extra Trees, MLP) συγκρίνονται με GroupKFold cross-validation ώστε να μη διαρρέει κανένα πρόβλημα ανάμεσα στα folds — με SHAP values να εξηγούν τι πραγματικά οδηγεί τις προβλέψεις.',
         tech: ['Python', 'Scikit-learn', 'XGBoost', 'SHAP'],
-        featured: true,
+        featured: 4,
         links: [{ label: 'Προβολή στο GitHub', href: urls.choices13k }],
       },
       {
@@ -464,7 +466,7 @@ const gr: SiteContent = {
         narrative:
           'Μια στατιστική μελέτη αναπαραγωγής που διερευνά την επαγγελματική μεροληψία ως προς την ηλικία και το φύλο μέσα στον embedding χώρο του GPT-2 Large. Πέρα από τη μέτρηση της ίδιας της μεροληψίας, το project τρέχει ένα πείραμα treatment-vs-control για να ελέγξει αν αυτή ενισχύεται όταν οι χρήστες αλληλεπιδρούν με την αναζήτηση Google Images — συνδυάζοντας αυστηρή επαγωγική στατιστική με διαδραστικά οπτικά diagnostics.',
         tech: ['Python', 'Statsmodels', 'SciPy', 'Altair', 'Seaborn'],
-        featured: true,
+        featured: 5,
         links: [{ label: 'Προβολή στο GitHub', href: urls.llmBias }],
       },
       {
@@ -519,7 +521,7 @@ const gr: SiteContent = {
           'Μια ομαδική πανεπιστημιακή εργασία που εξορύσσει αγοραστικά μοτίβα από πραγματικά δεδομένα πωλήσεων POS. Ο δικός μου ρόλος κάλυψε το data preprocessing, την exploratory analysis, το clustering και την οπτικοποίηση: K-Means και hierarchical clustering (με PCA/UMAP για μείωση διαστάσεων) τμηματοποιούν τόσο τα καλάθια αγορών σε ξεχωριστές "αποστολές" όσο και τους πελάτες σε ομάδες συμπεριφοράς, συμπληρωμένα με ανάλυση RFM και εκτίμηση CLV. Το Market Basket Analysis με τον αλγόριθμο Apriori, οπτικοποιημένο ως γραφήματα συναγοράς σε NetworkX, αναδεικνύει ποια προϊόντα τείνουν να πωλούνται μαζί.',
         tech: ['Python', 'Scikit-learn', 'UMAP', 'NetworkX'],
         links: [{ label: 'Προβολή στο GitHub', href: urls.supermarket }],
-        featured: true,
+        featured: 3,
       },
       {
         slug: 'smarket',

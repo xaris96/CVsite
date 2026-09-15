@@ -10,7 +10,7 @@ interface AvatarProps {
   focus?: string
 }
 
-export function Avatar({ src, initials = 'XN', name, size = 272, zoom = 1.75, focus = '50% 10%' }: AvatarProps) {
+export function Avatar({ src, initials = 'CH', name, size = 272, zoom = 1.75, focus = '50% 10%' }: AvatarProps) {
   const [failed, setFailed] = useState(false)
   const showPhoto = Boolean(src) && !failed
 

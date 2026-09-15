@@ -6,7 +6,7 @@ import { ProjectCard } from '@/components/ProjectCard'
 
 export function Projects() {
   const t = useContent()
-  const items = [...t.projects.items].sort((a, b) => Number(b.featured) - Number(a.featured))
+  const items = [...t.projects.items].sort((a, b) => (a.featured ?? Infinity) - (b.featured ?? Infinity))
 
   return (
     <section id="projects" className="border-t border-(--color-border) py-24 sm:py-32">

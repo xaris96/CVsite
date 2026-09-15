@@ -14,7 +14,7 @@ export interface Project {
   narrative: string
   tech: string[]
   links: ProjectLink[]
-  featured?: boolean
+  featured?: number
 }
 
 export interface SkillGroup {
